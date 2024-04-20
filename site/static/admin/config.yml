@@ -39,6 +39,9 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Values", name: "values", widget: "object", fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
+          - {label: "About Us", name: "about-us", widget: "object", fields: [
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Text", name: "text", widget: "text"}]}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
@@ -75,6 +78,19 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Image, name: image, widget: image}
           - label: Values
             name: values
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: text}
+              - {label: Image, name: imageUrl, widget: image}
+      - file: "site/content/about-us/_index.md"
+        label: "About Us"
+        name: "about-us"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: About Us
+            name: about-us
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
